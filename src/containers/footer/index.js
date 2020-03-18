@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import footerImg from "../../assets/pic/Niz.png";
-import TitleBlock from "../../components/titleBlock";
-import Slider from "../../components/slider";
 
 const StyledButton = styled.div`
   display: flex;
@@ -18,16 +16,28 @@ const StyledButton = styled.div`
   height: 50px;
   border-radius: 10px;
   background: limegreen;
+  bottom: -30px;
 `;
 
 const StyledBuilding = styled.div`
   display: flex;
-  background: url(${footerImg}) center center no-repeat;
+  //background: url(${footerImg}) center center no-repeat;
   flex-direction: column;
   align-items: center;
   height: 600px;
   justify-content: center;
   font-family: var(--footer-font);
+  width: 1380px;
+  div {
+  position: absolute;
+  }
+    @media (max-width: 768px) {
+    width: 100%;
+    height: 400px;
+     img {
+     display: none;
+    }
+  }
 `;
 
 const StyledText = styled.div`
@@ -46,11 +56,12 @@ const StyledText = styled.div`
     margin-left: 25px;
     margin-bottom: 5px;
   }
-`;
+`
 
 const Hero = props => {
   return (
     <StyledBuilding className={props.className}>
+      <img src={footerImg} alt="dd"/>
       <StyledText>
         <h3>ТЫ ВИКИНГ!</h3>
         <h1>ТЫ ГЕРОЙ!</h1>

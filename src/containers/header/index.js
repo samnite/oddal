@@ -11,6 +11,7 @@ const StyledHeader = styled.div`
   justify-content: flex-end;
   margin: 0 auto;
   width: 1380px;
+  margin-left: -20px;
   img {
     width: 100%;
   }
