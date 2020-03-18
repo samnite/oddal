@@ -1,5 +1,14 @@
 @import "../../settings.scss";
 .App-media {
+  &.App-main-media {
+    @media all and (max-width: $xl) {
+      margin-right: calc((1240px - 100vw) / 2);
+    }
+    @media all and (max-width: $lg) {
+      margin-right: 0;
+    }
+    margin-right: 0;
+  }
   @media all and (max-width: $md) {
     padding-bottom: var(--large-margin);
   }
@@ -19,12 +28,12 @@
     }
     @media all and (max-width: $md) {
       margin-left:6px;
-      border-bottom: 4px solid #303030;
+      border-bottom: 4px solid #6882aa;
     }
     display: grid;
     grid-template-columns: 336px 1fr;
     grid-column: 1 / span 3;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #6882aa;
     margin-right: -100px;
     .by-titleblock-text {
       @media all and (max-width: $lg) {
@@ -43,11 +52,11 @@
         margin-right:unset;
         display:none;
       }
-  
+      
       grid-column: 2;
       justify-self: flex-end;
       :last-child {
-        margin-right: 0;
+        margin-right: 100px;
       }
     }
   }

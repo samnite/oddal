@@ -23,7 +23,7 @@ class App extends React.Component {
       document.querySelector(".App-main-building"),
       document.querySelector(".App-main-dwarf1"),
       document.querySelector(".App-main-dwarf2"),
-      document.querySelector(".App-main-hero")
+      // document.querySelector(".App-main-hero")
     ];
 
     this.showUpElements.forEach(elem => {
@@ -69,9 +69,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Wrapper>
-          <Header />
-        </Wrapper>
+        <Header />
         <main className="App-main">
           <Wrapper id="App-main-media">
             <Media

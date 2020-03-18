@@ -8,33 +8,47 @@ const StyledText = styled.div`
   margin-right: 5px;
   p {
     color: var(--primary-color-title);
-    font-size: 23px;
     font-weight: bold;
+    &:first-child {
+      margin-top:0;
+    }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     font-size: 18px;
+    p {
+      color: var(--primary-color-title);
+      font-weight: bold;
+      &:first-child {
+        margin-top:36px;
+      }
+    }
   }
 `;
 
 const StyledImage = styled.div`
+  @media (max-width: 1024px) {
+    display: none;
+    grid-template-columns: 1fr;
+    height: 250px;
+    margin-left:0;
+  }
   display: flex;
   grid-column: 2 / span 2;
   justify-content: center;
   align-items: center;
   background-size: cover;
-  max-height: 450px;
+  max-height: 480px;
+  margin-left:38px;
   background: url(${dwarf2}) center center no-repeat;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    height: 250px;
-  }
 `;
 
 const StyledMobileImg = styled.div`
   display: none;
-  @media (max-width: 768px) {
-    display: flex;
+  @media (max-width: 1023px) {
+    display: block;
     width: 100%;
+  }
+  img { 
   }
 `;
 
@@ -44,19 +58,18 @@ const Dwarf2 = props => {
       <StyledMobileImg>
         <img src={dwarf2} alt="Dwarf" />
       </StyledMobileImg>
-      <StyledText>
+      <StyledText className="by-title-text">
         <p>
-          - FIGHT IN REAL TIME BATTLES WITH AI OR WITH OPPONENTS FROM ALL AROUND
-          THE WORLD
-        </p>
-        <p>- FOR SILVER, GOLD AND GLORY</p>
-        <p>
-          - GET REWARDS FROM CHESTS, UPGRADE YOUR SQUADS AND SKILLS, OR FIND NEW
-          ONES
+        - Use the unique skills of the northern gods that can turn the tide of any battle
         </p>
         <p>
-          - GATHER AN ARMY OF EPIC CHIEFTAINS OF THE GREAT VIKING CLANS AND
-          CRUSH EVERYONE ON YOUR WAY
+          - Create your invincible deck of squads and skills to crush everything and everyone your drakkar will swim into
+        </p>
+        <p>
+        - Fight in forests and fields, in the steppes and swamps - show everyone that you are the best jarl in the northern lands
+        </p>
+        <p>
+        - Play with friends, share tactics and ideas, make new ones and create a friendly community in the game
         </p>
       </StyledText>
       <StyledImage />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import Carousel, { Modal, ModalGateway } from 'react-images';
 import TitleBlock from "../../components/titleBlock";
 import Slider from "../../components/slider";
 import InfoBlock from "../../components/infoBlock";
@@ -15,7 +16,15 @@ class Media extends React.Component {
   };
   state = {
     pagesCount: 1,
-    current: 1
+    current: 1,
+    modalIsOpen: false,
+    selectedIndex: 0,
+  };
+  toggleModal = (selectedIndex) => {
+    this.setState(state => ({
+      modalIsOpen: !state.modalIsOpen,
+      selectedIndex: selectedIndex,
+    }));
   };
   pagesCountUpdated = pagesCount => {
     this.setState({ pagesCount: pagesCount });
@@ -24,7 +33,12 @@ class Media extends React.Component {
     this.setState({ current: current + 1 });
   };
   render() {
+    const { modalIsOpen } = this.state;
     let data = this.props.data;
+    let images = data.list.filter((item)=> item.image).map(item => item.image)
+    images.forEach((item, index) => {
+      item.index = index 
+    });
     return (
       <section className={`App-media ${this.props.className}`}>
         <TitleBlock className="App-title-with-divider" text={data.title} >
@@ -41,7 +55,7 @@ class Media extends React.Component {
             currentPageUpdated={this.currentPageUpdated}
           >
             {data.list.map((item, index) => (
-              <InfoBlock image={item.image} video={item.video} key={index} />
+              <InfoBlock image={item.image} video={item.video} key={index} onClick={() => this.toggleModal(item.index)}/>
             ))}
           </Slider>
           <Pagination
@@ -51,6 +65,15 @@ class Media extends React.Component {
             hideNumber={true}
           />
         </section>
+        <ModalGateway>
+          {modalIsOpen ? (
+            <Modal onClose={this.toggleModal}>
+              <Carousel
+                currentIndex={this.state.selectedIndex}
+                views={images} />
+            </Modal>
+          ) : null}
+        </ModalGateway>
       </section>
     );
   }

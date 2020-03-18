@@ -9,22 +9,18 @@
   }
   background: var(--secondary-bg);
   margin-right: -100px;
-  &:before {
-    @extend %bg-left;
-    z-index: 0;
-  }
   .App-dwarf1-art {
     @media all and (max-width: $md) {
-      max-height: 240px;
+      max-height: 600px;
       overflow: hidden;
       margin-left: 0;
+      padding-bottom: 0;
     }
     background: var(--primary-bg);
-    padding-bottom: var(--large-margin);
+    padding-bottom: 150px;
     margin-left: -100px;
     img {
       @media all and (max-width: $md) {
-        max-height: 240px;
         min-height: unset;
         object-fit: cover;
         width: 100%;
@@ -40,18 +36,21 @@
       grid-template-columns: unset;
       margin: 0 6px;
       padding-left: unset;
+      padding-top:var(--medium-margin);
     }
     display: grid;
-    align-self: center;
+    padding-top:150px;
+    align-self: flex-start;
     grid-column: 2 / span 2;
     padding-left: var(--medium-margin);
     // padding-right: var(--medium-margin);
     grid-template-columns: 1fr 320px;
     .by-title-text {
       grid-column: 1 / span 1;
-      font-size: var(--title-font-size);
       font-weight: bold;
       color: var(--primary-color-title);
+      font-size: 26px;
+      text-transform: uppercase;
     }
     .by-description-text {
       @media all and (max-width: $md) {

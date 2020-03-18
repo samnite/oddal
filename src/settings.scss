@@ -7,18 +7,18 @@ $xs: 0px;
 
 %bg-left {
   @media all and (max-width: $xl) {
-    width: 412px;
+    width: calc(412px + 2000px);
   }
   @media all and (max-width: $lg) {
-    width: 342px;
+    width: calc(342px + 2000px);
   }
   @media all and (max-width: $md) {
     width: 100%;
   }
-  background-color: var(--primary-bg);
+  background-color: var(--secondary-bg);
   content: "";
-  width: 442px;
-  left: 0;
+  width: calc(444px + 2000px);
+  left: calc(-2000px);
   top: 0;
   bottom: 0;
   position: absolute;

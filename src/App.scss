@@ -12,8 +12,8 @@
     --desc-font-size: 1rem;
     --by-btn-font-size: 1rem;
   }
-  --primary-font: "Kanit", sans-serif;
-  --secondary-font: "Kanit", sans-serif;
+  --primary-font: "Futura", sans-serif;
+  --secondary-font: "Futura", sans-serif;
   --footer-font: "Norse Heavy", sans-serif;
 
   --primary-color-text: #58595a;
@@ -52,6 +52,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Kanit";
+  src: url("./assets/fonts/kanit.otf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 ::before,
 ::after {
@@ -73,13 +81,27 @@
 }
 
 body {
+  @media all and (max-width: $md) {
+    width: 100%;
+  }
+  width: 100vw;
+  overflow-x: hidden;
   font-family: var(--primary-font);
   background-color: var(--secondary-bg);
   &:before {
+    @media all and (max-width: $xl) {
+      width: calc((100vw - 1240px + 412px + 412px) / 2);
+    }
+    @media all and (max-width: $lg) {
+      width:342px;
+    }
+    @media all and (max-width: $md) {
+      width: 100%;
+    }
     height: 100vh;
     background-color: var(--primary-bg);
     content: "";
-    width: calc((100vw - 1240px) / 2);
+    width: calc((100vw - 1240px + 442px + 442px) / 2);
     position: fixed;
     z-index: 0;
 

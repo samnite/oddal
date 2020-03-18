@@ -6,7 +6,7 @@
 }
 .by-info-block {
   @media all and (max-width: $md) {
-    padding: 6px;
+    padding: 0;
     width: 100vw;
   }
   display: grid;
@@ -18,18 +18,21 @@
   column-gap: 16px;
   row-gap: 4px;
   width: 360px;
-  padding: 19px 26px 19px 20px;
-  background: var(--primary-bg);
+  padding: 0;
+  // background: var(--primary-bg);
   &.by-round-image {
     img {
       border-radius: 50%;
     }
   }
+  video {
+    width:100%;
+    height:auto;
+  }
   img {
     justify-content: center;
     align-items: center;
     grid-column: 1;
-    height: 175px;
 
     object-fit: var(--by-info-block-image-contain);
   }
