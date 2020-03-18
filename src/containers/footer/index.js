@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import footerImg from "../../assets/pic/Niz.png";
+import TitleBlock from "../../components/titleBlock";
+import Slider from "../../components/slider";
 
 const StyledButton = styled.div`
   display: flex;
@@ -10,6 +12,7 @@ const StyledButton = styled.div`
   margin-left: 30px;
   font-size: 24px;
   font-weight: bold;
+  font-family: var(--primary-font);
   color: #fff;
   width: 200px;
   height: 50px;
@@ -54,6 +57,7 @@ const Hero = props => {
         <StyledButton>ИГРАТЬ</StyledButton>
       </StyledText>
     </StyledBuilding>
+
   );
 };
 

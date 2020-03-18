@@ -75,7 +75,7 @@ class App extends React.Component {
         <main className="App-main">
           <Wrapper id="App-main-media">
             <Media
-              className="App-main-feedback App-main-layout"
+              className="App-main-media App-main-layout"
               data={data.main.media}
             />
           </Wrapper>

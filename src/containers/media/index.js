@@ -27,7 +27,7 @@ class Media extends React.Component {
     let data = this.props.data;
     return (
       <section className={`App-media ${this.props.className}`}>
-        <TitleBlock className="App-title-with-divider" text={data.title}>
+        <TitleBlock className="App-title-with-divider" text={data.title} >
           <Pagination
             count={this.state.pagesCount}
             active={this.state.current}
