@@ -33,7 +33,7 @@ class InfoBlock extends Component {
         }`}
       >
         {this.props.image ? (
-          <img src={this.props.image.src} alt={this.props.image.alt} />
+          <img src={this.props.image.src} alt={this.props.image.alt} onClick={this.props.onClick.bind(this)} />
         ) : null}
         {this.props.video ? (
           <video

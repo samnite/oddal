@@ -21,25 +21,29 @@ export default {
         {
           video: {
             src: trailer,
-            title: ""
+            title: "", 
+            type: 'video'
           }
         },
         {
           image: {
             src: screen1,
-            alt: "Screen"
+            alt: "Screen", 
+            type: 'image'
           }
         },
         {
           image: {
             src: screen2,
-            alt: "Screen"
+            alt: "Screen", 
+            type: 'image'
           }
         },
         {
           image: {
             src: screen3,
-            alt: "Screen"
+            alt: "Screen", 
+            type: 'image'
           }
         }
       ]

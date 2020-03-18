@@ -1,0 +1,21 @@
+@import "../../settings.scss";
+
+.by-wrapper-container#App-main-building {
+    overflow: hidden;
+    width:100%;
+    .App-main-building {
+        
+        &:before {
+            @extend %bg-left;
+            z-index: 0;
+        }
+        @media all and (max-width: $md) {
+          margin-left:6px;
+        }
+        .description {
+            @media all and (max-width: $lg) {
+                margin-left:6px;
+            }
+        }
+    }
+}

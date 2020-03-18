@@ -4,25 +4,23 @@ import dwarf1 from "../../assets/pic/Pict_1.png";
 
 class Dwarf1 extends React.Component {
   render() {
+
     return (
       <section className={`App-dwarf1 ${this.props.className}`}>
         <div className="App-dwarf1-art">
           <img src={dwarf1} alt="Screenshot" />
         </div>
         <div className="App-dwarf1-info">
-          <div className="by-title-text" style={{ fontSize: "23px" }}>
+          <div className="by-title-text">
             <p>
-              - FIGHT IN REAL TIME BATTLES WITH AI OR WITH OPPONENTS FROM ALL
-              AROUND THE WORLD
+            - Fight in real time battles with AI or with opponents from all around the world
             </p>
-            <p>- FOR SILVER, GOLD AND GLORY</p>
+            <p>- For silver, gold and glory</p>
             <p>
-              - GET REWARDS FROM CHESTS, UPGRADE YOUR SQUADS AND SKILLS, OR FIND
-              NEW ONES
+            - Get rewards from chests, upgrade your squads and skills, or find new ones
             </p>
             <p>
-              - GATHER AN ARMY OF EPIC CHIEFTAINS OF THE GREAT VIKING CLANS AND
-              CRUSH EVERYONE ON YOUR WAY
+            - Gather an army of epic chieftains of the great viking clans and crush everyone on your way
             </p>
           </div>
         </div>

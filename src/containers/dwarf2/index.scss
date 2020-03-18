@@ -7,12 +7,9 @@
     margin-right: 0;
     padding-bottom: var(--large-margin);
   }
-  background: var(--secondary-bg);
+  // background: var(--secondary-bg);
   margin-right: -100px;
-  &:before {
-    @extend %bg-left;
-    z-index: 0;
-  }
+  padding-bottom: 321px;
   .App-works2-art {
     @media all and (max-width: $md) {
       max-height: 240px;
@@ -51,9 +48,12 @@
     grid-template-columns: 1fr 320px;
     .by-title-text {
       grid-column: 1 / span 1;
-      font-size: var(--title-font-size);
       font-weight: bold;
       color: var(--primary-color-title);
+      p {
+
+        font-size: 23px;
+      }
     }
     .by-description-text {
       @media all and (max-width: $md) {
@@ -69,6 +69,16 @@
     }
   }
 
+  .by-title-text {
+    grid-column: 1 / span 1;
+    font-weight: bold;
+    color: var(--primary-color-title);
+    font-size: 23px;
+    text-transform: uppercase;
+    @media all and (max-width: $lg) {
+        margin-left:6px;
+    }
+  }
   .App-works-consult {
     @media all and (max-width: $md) {
       display: none;
