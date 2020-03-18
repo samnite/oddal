@@ -12,7 +12,6 @@ import Header from "./containers/header";
 import Dwarf2 from "./containers/dwarf2";
 import Building from "./containers/building";
 import Hero from "./containers/footer";
-import Feedback from "./containers/feedback";
 
 class App extends React.Component {
   showUpElements = [];
@@ -92,13 +91,6 @@ class App extends React.Component {
           <Wrapper id="App-main-hero">
             <Hero className="App-main-hero" />
           </Wrapper>
-          {/*<Wrapper id="App-main-feedback">*/}
-          {/*  <Feedback*/}
-          {/*    className="App-main-feedback App-main-layout"*/}
-          {/*    colorize={true}*/}
-          {/*    roundImage={true}*/}
-          {/*  />*/}
-          {/*</Wrapper>*/}
         </main>
         <Footer />
       </div>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./index.scss";
 import Button from "../button";
-import { Player, BigPlayButton } from "video-react";
 
 class InfoBlock extends Component {
   state = {
