@@ -10,6 +10,7 @@ const StyledHeader = styled.div`
   align-items: center;
   justify-content: flex-end;
   margin: 0 auto;
+  width: 1380px;
   img {
     width: 100%;
   }
@@ -18,6 +19,7 @@ const StyledHeader = styled.div`
   }
   @media (max-width: 768px) {
     flex-direction: row;
+    width: 100%;
   }
 `;
 
